@@ -71,10 +71,11 @@ export default function Signup({ fetchQuestions }) {
         <div
           style={{ width: "100%", display: "flex", justifyContent: "center" }}
         >
-          {/* <img
+          <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZeHx60JdEAN-hupEX-N5K86jQCt-HVvxiIg&usqp=CAU"
+            alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZeHx60JdEAN-hupEX-N5K86jQCt-HVvxiIg&usqp=CAU"
             className="quizImg"
-          /> */}
+          />
         </div>
         <div className="text">
           {" "}

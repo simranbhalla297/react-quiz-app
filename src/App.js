@@ -26,9 +26,9 @@ export default function App() {
         setQuestionList(response.results);
       });
   };
-  useEffect(()=>{
-    fetchQuestions()
-  },[])
+  // useEffect(()=>{
+  //   fetchQuestions()
+  // },[])
 
   console.log(quetionList);
   return (
@@ -49,8 +49,7 @@ export default function App() {
             }}
           >
             <Route exact path="/">
-              {" "}
-              <MainMenu />
+              <MainMenu fetchQuestions={fetchQuestions}  />
             </Route>
             <Route exact path="/quiz">
               <Quiz
