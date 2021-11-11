@@ -1,0 +1,70 @@
+.result_wrapper {
+  background-color: #42b5a4;
+  height: 100vh;
+}
+.totalQuestion,
+.score,
+.correctAnswer,
+.wrongAnswer {
+  background-color: teal;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 70%;
+  margin: 10px auto;
+  font-size: 20px;
+  text-align: center;
+  color: #ffe387;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.resultText h2 {
+  text-align: center;
+  padding: 15px;
+  color: #ffe387;
+  border-bottom: 1px solid #fff;
+}
+.result_container {
+  margin-top: 50px;
+}
+.button {
+  width: 70%;
+  margin: 30px auto;
+}
+.restartBtn {
+  width: 100%;
+}
+.circle_container {
+  display: flex;
+  justify-content: center;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 80%;
+  border: 10px solid #fff;
+  padding: 10px;
+  margin-top: 3px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.totalscore{
+    color:#ffe387;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+@media (max-width: 614px) {
+  .totalQuestion,
+  .score,
+  .correctAnswer,
+  .wrongAnswer {
+    width: 90%;
+    margin: 10px auto;
+    font-size: 16px;
+  }
+  .resultText h2 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,70 @@
+.loginForm {
+  width: 25%;
+  margin: 60px auto;
+  height: 60vh;
+  background-color: #fff;
+}
+.text h2 {
+  text-align: center;
+
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.form label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form input {
+  padding: 5px;
+}
+.btn {
+  width: 100%;
+  padding: 8px;
+}
+.quizImg {
+  height: 200px;
+  width: 200px;
+}
+.continueBtn{
+    background:  #101427 !important; ;
+}
+
+@media screen and (max-width: 780px) {
+  .loginForm {
+    width: 100%;
+    margin: 30px auto;
+    height: 100vh;
+  }
+  .quizImg {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .loginForm {
+    width: 100%;
+    margin: 30px auto;
+    height: 100vh;
+  }
+  .quizImg {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .loginForm {
+    width: 100%;
+    margin: 30px auto;
+    height: 100vh;
+  }
+  .quizImg {
+    height: 150px;
+    width: 150px;
+  }
+}

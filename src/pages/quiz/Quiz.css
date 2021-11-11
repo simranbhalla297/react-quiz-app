@@ -1,0 +1,261 @@
+.wrapper {
+  height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #42b5a4;
+  padding-top: 2px;
+}
+.main {
+  margin: auto;
+}
+.timer {
+  padding-top: 5px;
+}
+.user_Icon {
+  border-radius: 50px;
+  border: 2px solid #fff;
+  padding: 10px;
+  margin-top: 3px;
+}
+.question_container {
+  background-color: #ffe387;
+  box-shadow: 0px 4px 0px 0px #e0cd8e;
+  width: 40%;
+
+  border: 1px solid #ffe387;
+  margin: 50px auto;
+  text-align: center;
+  padding: 30px;
+  border-radius: 5px;
+}
+.questionLength {
+  position: relative;
+}
+
+.question {
+  margin-top: 10px;
+}
+.question-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.image_container {
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+}
+.question_image {
+  width: 200px;
+  height: 180px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.questionText {
+  margin-top: 10px;
+}
+
+.questionBox {
+  position: absolute;
+  top: -40px;
+  left: calc(100% - 55%);
+  width: 80px;
+  border-radius: 10px;
+  padding: 5px;
+  color: #42b5a4;
+  font-size: 17px;
+  background-color: #fff;
+  font-weight: bold;
+}
+
+.answer_container {
+  width: 50%;
+  padding: 10px;
+  margin: auto;
+  border-radius: 20px;
+}
+.error {
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  background-color: red;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.answer_section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+.options {
+  width: 100%;
+  background: transparent;
+  margin-right: 10px;
+  color: #42b5a4;
+  border: 2px solid #42b5a4;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: bold;
+  box-shadow: 0px 3px 0px 0px #a6dcd4d6;
+  text-align: center;
+  cursor: pointer;
+}
+.button {
+  margin-top: 20px;
+
+  width: 100%;
+  margin-bottom: 50px;
+}
+.nextBtn,.finishBtn {
+  width: 100%;
+}
+
+.select {
+  background-color: #42b5a4;
+  color: #fff;
+  box-shadow: 0 0 1px black;
+}
+.wrong {
+  background-color: red;
+  border: 3px solid red;
+  box-shadow: 0 0 1px black;
+  color: #fff;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+.timerIcon {
+  color: #fff;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 780px) {
+  .question_container {
+    margin: 30px auto;
+    text-align: center;
+    width: 90%;
+    border-radius: 20px;
+  }
+  .question_image {
+    width: 100px;
+    height: 100px;
+  }
+  .answer_section {
+    display: flex;
+    flex-direction: column;
+  }
+  .questionBox {
+    top: -30px;
+    left: 40%;
+    width: 80px;
+  }
+  .answer_container {
+    width: 100%;
+  }
+  .nextBtn {
+    width: 100%;
+  }
+  .button {
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+  }
+  .question-text {
+    margin-bottom: 30px;
+  }
+  .question {
+    margin-top: 30px;
+  }
+  .question_container {
+    margin: 50px auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .question_container {
+    margin: 20px auto;
+    height: 200px;
+    padding: 10px;
+  }
+  .questionBox {
+    left: 39%;
+  }
+  .question-text {
+    margin-bottom: 5px;
+  }
+  .question_image {
+    width: 160px;
+  }
+  .answer_section {
+    grid-gap: 1px;
+  }
+  .error {
+    padding: 5px;
+  }
+  .options {
+    margin-top: 8px;
+    padding: 5px;
+  }
+  .timerIcon {
+    color: #fff;
+    font-size: 20px;
+  }
+  .user_Icon {
+    border-radius: 50px;
+    border: 2px solid #fff;
+    padding: 5px;
+    margin-top: 3px;
+  }
+  .questionText {
+    margin-top: 5px;
+  }
+  .questionText p {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .question_container {
+    margin: 20px auto;
+    height: 200px;
+    padding: 10px;
+  }
+  .question-text {
+    margin-bottom: 5px;
+  }
+  .answer_section {
+    grid-gap: 1px;
+  }
+  .error {
+    padding: 5px;
+  }
+  .options {
+    margin-top: 8px;
+    padding: 5px;
+  }
+  .timerIcon {
+    color: #fff;
+    font-size: 20px;
+  }
+  .user_Icon {
+    border-radius: 50px;
+    border: 2px solid #fff;
+    padding: 5px;
+    margin-top: 3px;
+  }
+  .questionText {
+    margin-top: 5px;
+  }
+  .questionText p {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+}
