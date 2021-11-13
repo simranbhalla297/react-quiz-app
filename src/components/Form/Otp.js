@@ -20,7 +20,7 @@ function Otp({ fetchQuestions }) {
         console.log("otp right sign in");
         alert("oty verified");
         redirectToOtpQUiz();
-        fetchQuestions()
+        fetchQuestions();
 
         // ...
       })
@@ -40,12 +40,15 @@ function Otp({ fetchQuestions }) {
   return (
     <div className="otpScreen">
       <div className="otpContainer">
+        <div className="optHeading">
+          <h4>Enter OTP sent to your mobile number</h4>
+        </div>
         <div>
           <input
             type="text"
             placeholder="Enter your OTP"
             onChange={(e) => setotp(e.target.value)}
-          ></input>
+          />
           <br />
           <br />
           <Button onClick={ValidateOtp}>Verify</Button>

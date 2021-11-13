@@ -14,7 +14,7 @@ export default function App() {
   const [rightanswer, setRightanswer] = useState(0);
   const [wronganswer, setWronganswer] = useState(0);
   const [quetionList, setQuestionList] = useState([]);
-
+  const [mynumber, setnumber] = useState("");
   console.log(quetionList);
   const fetchQuestions = () => {
     const apiUrl =
@@ -26,12 +26,12 @@ export default function App() {
         setQuestionList(response.results);
       });
   };
-  useEffect(()=>{
-    fetchQuestions()
-  },[])
+  useEffect(() => {
+    fetchQuestions();
+  }, []);
 
   console.log(quetionList);
-  var questionlength=quetionList.length
+  var questionlength = quetionList.length;
   console.log(questionlength);
   return (
     <div className="app">
@@ -47,11 +47,12 @@ export default function App() {
               setRightanswer,
               wronganswer,
               setWronganswer,
-              
+              mynumber,
+              setnumber,
             }}
           >
             <Route exact path="/">
-              <MainMenu fetchQuestions={fetchQuestions}  />
+              <MainMenu fetchQuestions={fetchQuestions} />
             </Route>
             <Route exact path="/quiz">
               <Quiz
@@ -59,15 +60,12 @@ export default function App() {
                 setQuestionList={setQuestionList}
               />
             </Route>
-            <Route
-              exact
-              path="/endScreen"
-             
-            >
+            <Route exact path="/endScreen">
               <EndScreen
-              quetionList={quetionList}
-              length={questionlength}
-              setQuestionList={setQuestionList} />
+                quetionList={quetionList}
+                length={questionlength}
+                setQuestionList={setQuestionList}
+              />
             </Route>
             <Route exact path="/otp">
               <Otp fetchQuestions={fetchQuestions} />
