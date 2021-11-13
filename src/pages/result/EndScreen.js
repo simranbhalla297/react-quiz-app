@@ -1,17 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
-import React, {useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { QuizContext } from "../../Helpers/Context";
-import { questions } from "../../Helpers/QuestionBank";
+// import { questions } from "../../Helpers/QuestionBank";
 import { useHistory } from "react-router";
 import Button from "react-bootstrap/Button";
 import "./EndScreen.css";
 // eslint-disable-next-line react/prop-types
-export default function EndScreen({ quetionList,fetchQuestions }) {
-  useEffect(()=>{
-    fetchQuestions()
-  },[])
+export default function EndScreen({ quetionList }) {
   console.log(quetionList);
   const {
     score,
@@ -22,10 +19,10 @@ export default function EndScreen({ quetionList,fetchQuestions }) {
     setWronganswer,
   } = useContext(QuizContext);
   // eslint-disable-next-line react/prop-types
-  var totalQuestion = quetionList.length
+  var totalQuestion = quetionList.length;
   const history = useHistory();
   const gameRestart = () => {
-    history.push("/");
+    history.push("/quiz");
     setScore(0);
     setRightanswer(0);
     setWronganswer(0);
@@ -68,7 +65,7 @@ export default function EndScreen({ quetionList,fetchQuestions }) {
       </div>
       <div className="circle_container">
         <div className="circle">
-          <div className='totalscore'>
+          <div className="totalscore">
             {score}/{totalQuestion}
           </div>
         </div>

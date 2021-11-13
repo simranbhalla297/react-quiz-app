@@ -26,11 +26,13 @@ export default function App() {
         setQuestionList(response.results);
       });
   };
-  // useEffect(()=>{
-  //   fetchQuestions()
-  // },[])
+  useEffect(()=>{
+    fetchQuestions()
+  },[])
 
   console.log(quetionList);
+  var questionlength=quetionList.length
+  console.log(questionlength);
   return (
     <div className="app">
       <BrowserRouter>
@@ -64,6 +66,7 @@ export default function App() {
             >
               <EndScreen
               quetionList={quetionList}
+              length={questionlength}
               setQuestionList={setQuestionList} />
             </Route>
             <Route exact path="/otp">

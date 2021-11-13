@@ -20,6 +20,7 @@ function Otp({ fetchQuestions }) {
         console.log("otp right sign in");
         alert("oty verified");
         redirectToOtpQUiz();
+        fetchQuestions()
 
         // ...
       })
