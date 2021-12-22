@@ -1,31 +1,26 @@
-import React, { useState, useEffect } from "react";
-import { FaRegClock } from "react-icons/fa";
-export default function Timer() {
-  const [seconds, setSeconds] = useState(10);
+import React,{useEffect,useState} from 'react'
+
+export default function Timer({setTimeOut,questionNumber}) {
+  const [timer, setTimer] = useState(10);
 
   useEffect(() => {
-    if (seconds > 0) {
-      setTimeout(() => setSeconds(seconds - 1), 1000);
-    } else {
-      setSeconds("You're out of time!");
-    }
-  });
+    if (timer === 0) return setTimeOut(true);
+    const interval = setInterval(() => {
+      setTimer((prev) => prev - 1);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [timer, setTimeOut]);
+
+  useEffect(() => {
+    setTimer(10);
+  }, [questionNumber]);
+ 
 
   return (
-    <div className="timer">
-      <div style={{ textAlign: "center" }}>
-        <FaRegClock className="timerIcon" /> <br />{" "}
-        <p
-          style={{
-            marginTop: "5px",
-            color: "#ffe387",
-            fontsize: "18px",
-            fontWeight: "bold",
-          }}
-        >
-          {seconds}
-        </p>
-      </div>
+    <div>
+      <h2>Timer</h2>
+      <p>{timer}</p>
     </div>
-  );
+  )
 }
+

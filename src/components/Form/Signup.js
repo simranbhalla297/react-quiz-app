@@ -1,9 +1,8 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-console */
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
+// eslint-disable-next-line no-unused-vars
 import firebase from "../../Firebase.js";
 import { useHistory } from "react-router";
+import {QuizContext} from "../../Helpers/Context"
 import Button from "react-bootstrap/Button";
 import "./Signup.css";
 import {
@@ -14,7 +13,8 @@ import {
 // eslint-disable-next-line react/prop-types
 export default function Signup({ fetchQuestions }) {
   const history = useHistory();
-  const [mynumber, setnumber] = useState("");
+  // const [mynumber, setnumber] = useState("");
+  const { mynumber, setnumber } = useContext(QuizContext);
   // eslint-disable-next-line no-console
   const setUpRecaptcha = () => {
     const auth = getAuth();
@@ -63,6 +63,7 @@ export default function Signup({ fetchQuestions }) {
 
   const redirectToOtpScreen = () => {
     console.log("redirect to OTP screen");
+   
     history.push("/otp");
   };
   return (
